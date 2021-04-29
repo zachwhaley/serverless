@@ -2,6 +2,9 @@
 
 'use strict';
 
+// `EvalError` is used to not pollute global namespace but still have the value accessible globally
+EvalError.$serverlessCommandStartTime = process.hrtime();
+
 require('essentials');
 
 // global graceful-fs patch
