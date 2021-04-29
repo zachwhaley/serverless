@@ -86,9 +86,9 @@ describe('test/unit/lib/utils/anonymize-stacktrace-paths.test.js', () => {
 
     it('Should remove common prefix if `\\serverless\\` not found in path', () => {
       const stacktracePaths = [
-        'C:\\home\\xxx\\serverless\\yyy\\zzz-serverless\\serverless\\lib\\plugins\\aws\\package\\lib\\getHashForFilePath.js:23:13',
-        'C:\\home\\xxx\\serverless\\yyy\\zzz-serverless\\serverless\\lib\\plugins\\otherfile.js:100:10',
-        'C:\\home\\xxx\\serverless\\yyy\\zzz-serverless\\serverless\\lib\\plugins\\another.js:100:10',
+        'C:\\home\\xxx\\yyy\\zzz-serverless\\lib\\plugins\\aws\\package\\lib\\getHashForFilePath.js:23:13',
+        'C:\\home\\xxx\\yyy\\zzz-serverless\\lib\\plugins\\otherfile.js:100:10',
+        'C:\\home\\xxx\\yyy\\zzz-serverless\\lib\\plugins\\another.js:100:10',
       ];
 
       const result = anonymizeStacktracePaths(stacktracePaths);
